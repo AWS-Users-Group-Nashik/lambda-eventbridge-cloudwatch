@@ -5,6 +5,23 @@ provider:
   runtime: nodejs18.x
   region: ap-south-1
   stage: dev
+  logs:
+    httpApi: true
+  iam:
+    role:
+      statements:
+        # Allow both Lambdas to use EventBridge
+        - Effect: Allow
+          Action:
+            - events:PutEvents
+            - events:DescribeEventBus
+          Resource: "*"
+        - Effect: Allow
+          Action:
+            - logs:CreateLogGroup
+            - logs:CreateLogStream
+            - logs:PutLogEvents
+          Resource: arn:aws:logs:*:*:*
 
 functions:
   hello:
@@ -19,3 +36,12 @@ functions:
       - httpApi:
           path: /register
           method: post
+  sendWelcomeEmail:
+    handler: handler.sendWelcomeEmail
+    events:
+      - eventBridge:
+          pattern:
+            source:
+              - user.registration
+            detail-type:
+              - UserRegistered

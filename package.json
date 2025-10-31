@@ -2,5 +2,8 @@
   "name": "serverless-hello",
   "version": "1.0.0",
   "main": "handler.js",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@aws-sdk/client-eventbridge": "^3.922.0"
+  }
 }
