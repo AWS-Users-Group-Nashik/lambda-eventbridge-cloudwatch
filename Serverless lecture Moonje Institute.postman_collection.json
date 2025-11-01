@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "5198a8ca-830d-4ac9-a99e-81023c44f0fd",
+		"name": "Serverless lecture Moonje Institute",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8752888"
+	},
+	"item": [
+		{
+			"name": "Hello World",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://shbqk4nkik.execute-api.ap-south-1.amazonaws.com/",
+					"protocol": "https",
+					"host": [
+						"shbqk4nkik",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://shbqk4nkik.execute-api.ap-south-1.amazonaws.com/",
+							"protocol": "https",
+							"host": [
+								"shbqk4nkik",
+								"execute-api",
+								"ap-south-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 01 Nov 2025 06:33:35 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "51"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Apigw-Requestid",
+							"value": "TWd13iVPhcwEMMw="
+						}
+					],
+					"cookie": [],
+					"body": "{\"message\":\"Hello World from Dr. Moonje Institute\"}"
+				}
+			]
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"yashgkar\",\n    \"email\": \"yashgkar@moonjeinst.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://shbqk4nkik.execute-api.ap-south-1.amazonaws.com/register",
+					"protocol": "https",
+					"host": [
+						"shbqk4nkik",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"yashgkar\",\n    \"email\": \"yashgkar@moonjeinst.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://shbqk4nkik.execute-api.ap-south-1.amazonaws.com/register",
+							"protocol": "https",
+							"host": [
+								"shbqk4nkik",
+								"execute-api",
+								"ap-south-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 01 Nov 2025 06:43:57 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "100"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Apigw-Requestid",
+							"value": "TWfXCjtShcwEJVw="
+						}
+					],
+					"cookie": [],
+					"body": "{\"success\":true,\"message\":\"account created\",\"username\":\"yashgkar\",\"email\":\"yashgkar@moonjeinst.com\"}"
+				}
+			]
+		}
+	]
+}
